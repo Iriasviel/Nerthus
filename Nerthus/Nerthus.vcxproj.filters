@@ -4,6 +4,9 @@
     <Filter Include="Nerthus">
       <UniqueIdentifier>{0E77E76B-7A56-6607-836E-F1DDEFCCCC68}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Nerthus\Events">
+      <UniqueIdentifier>{32E70A73-1EB5-FE78-0749-6F9FF3B5DADD}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Nerthus.h" />
@@ -15,6 +18,18 @@
     </ClInclude>
     <ClInclude Include="src\Nerthus\EntryPoint.h">
       <Filter>Nerthus</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Nerthus\Events\ApplicationEvent.h">
+      <Filter>Nerthus\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Nerthus\Events\Event.h">
+      <Filter>Nerthus\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Nerthus\Events\KeyEvent.h">
+      <Filter>Nerthus\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Nerthus\Events\MouseEvent.h">
+      <Filter>Nerthus\Events</Filter>
     </ClInclude>
     <ClInclude Include="src\Nerthus\Log.h">
       <Filter>Nerthus</Filter>
