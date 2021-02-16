@@ -1,0 +1,3 @@
+[submodule "Nerthus/vendor/spdlog"]
+	path = Nerthus/vendor/spdlog
+	url = https://github.com/gabime/spdlog

@@ -21,15 +21,21 @@
     <ClInclude Include="src\Nerthus\Application.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\Nerthus.h">
+    <ClInclude Include="src\Nerthus\EntryPoint.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\Nerthus\EntryPoint.h">
+    <ClInclude Include="src\Nerthus\Log.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Nerthus.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Nerthus\Application.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Nerthus\Log.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
