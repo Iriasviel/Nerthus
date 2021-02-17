@@ -18,6 +18,9 @@ project "Nerthus"
     targetdir ("bin/" .. outputdir .. "/%{prj.name}")
     objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
 
+    pchheader "ntpch.h"
+    pchsource "Nerthus/src/ntpch.cpp"
+
     files
     {
         "%{prj.name}/src/**.h",

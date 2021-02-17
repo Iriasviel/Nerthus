@@ -1,3 +1,4 @@
+#include "ntpch.h"
 #include "Application.h"
 
 #include "Nerthus/Events/ApplicationEvent.h"

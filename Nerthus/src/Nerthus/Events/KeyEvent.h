@@ -2,8 +2,6 @@
 
 #include "Event.h"
 
-#include <sstream>
-
 namespace Nerthus
 {
 	class NERTHUS_API KeyEvent : public Event

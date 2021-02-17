@@ -1,3 +1,4 @@
+#include "ntpch.h"
 #include <Nerthus.h>
 
 class Sandbox : public Nerthus::Application

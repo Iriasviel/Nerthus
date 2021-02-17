@@ -2,9 +2,6 @@
 
 #include "Nerthus/Core.h"
 
-#include <string>
-#include <functional>
-
 namespace Nerthus
 {
 	enum class EventType
