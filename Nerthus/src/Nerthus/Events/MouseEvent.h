@@ -51,7 +51,7 @@ namespace Nerthus
 			return ss.str();
 		}
 
-		EVENT_CLASS_TYPE(MouseScrolledEvent);
+		EVENT_CLASS_TYPE(MouseScrolled);
 		EVENT_CLASS_CATEGORY(EventCategoryMouse | EventCategoryInput);
 
 	private:
@@ -74,28 +74,41 @@ namespace Nerthus
 		int m_Button;
 	};
 
-	class NERTHUS_API MousePressedEvent : public MouseButtonEvent
+	class NERTHUS_API MouseButtonPressedEvent : public MouseButtonEvent
 	{
 	public:
-		MousePressedEvent(int button)
+		MouseButtonPressedEvent(int button)
 			: MouseButtonEvent(button)
 		{
 
 		}
 
-		inline int GetMouseButton() const { return m_Button; }
+		std::string ToString() const override
+		{
+			std::stringstream ss;
+			ss << "MouseButtonPressedEvent: " << m_Button;
+			return ss.str();
+		}
+
+		EVENT_CLASS_TYPE(MouseButtonPressed);
+	};
+	
+	class NERTHUS_API MouseButtonReleasedEvent : public MouseButtonEvent
+	{
+	public:
+		MouseButtonReleasedEvent(int button)
+			: MouseButtonEvent(button)
+		{
+
+		}
 
 		std::string ToString() const override
 		{
 			std::stringstream ss;
-			ss << "MouseScrolledEvent: " << m_Button;
+			ss << "MouseButtonReleasedEvent: " << m_Button;
 			return ss.str();
 		}
 
-		EVENT_CLASS_TYPE(MouseButtonEvent);
-		EVENT_CLASS_CATEGORY(EventCategoryMouse | EventCategoryInput);
-
-	private:
-		int m_Button;
+		EVENT_CLASS_TYPE(MouseButtonReleased);
 	};
 }
