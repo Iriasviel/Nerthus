@@ -1,3 +1,6 @@
 [submodule "Nerthus/vendor/spdlog"]
 	path = Nerthus/vendor/spdlog
 	url = https://github.com/gabime/spdlog
+[submodule "Nerthus/vendor/GLFW"]
+	path = Nerthus/vendor/GLFW
+	url = https://github.com/Iriasviel/glfw

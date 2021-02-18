@@ -10,6 +10,12 @@ workspace "Nerthus"
 
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
+-- Include directories relative to root folder (solution directory)
+IncludeDir = {}
+IncludeDir["GLFW"] = "Nerthus/vendor/GLFW/include"
+
+include "Nerthus/vendor/GLFW"
+
 project "Nerthus"
     location "Nerthus"
     kind "SharedLib"
@@ -30,7 +36,14 @@ project "Nerthus"
     includedirs
     {
         "%{prj.name}/src",
-        "%{prj.name}/vendor/spdlog/include"
+        "%{prj.name}/vendor/spdlog/include",
+        "%{IncludeDir.GLFW}"
+    }
+
+    links
+    {
+        "GLFW",
+        "opengl32.lib"
     }
 
     filter "system:windows"
