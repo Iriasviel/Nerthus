@@ -13,14 +13,16 @@ namespace Nerthus
 		unsigned int Width;
 		unsigned int Height;
 
-		WindowProps(const std::string& title = "Nerthus Engine", unsigned int width, unsigned int height)
+		WindowProps(const std::string& title = "Nerthus Engine", 
+					unsigned int width = 1280, 
+					unsigned int height = 720)
 			: Title(title), Width(width), Height(height)
 		{
 
 		}
 	};
 
-	// Interface reperesenting a desktop system based Window
+	// Interface representing a desktop system based Window
 	class NERTHUS_API Window
 	{
 	public:
@@ -39,6 +41,5 @@ namespace Nerthus
 		virtual bool IsVSync() const = 0;
 
 		static Window* Create(const WindowProps& props = WindowProps());
-
 	};
 }
