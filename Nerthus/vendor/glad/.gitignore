@@ -1,0 +1,7 @@
+# VS Settings files
+*.user
+
+# Directories
+.vs/
+bin/
+bin-int/

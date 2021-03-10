@@ -4,3 +4,6 @@
 [submodule "Nerthus/vendor/GLFW"]
 	path = Nerthus/vendor/GLFW
 	url = https://github.com/Iriasviel/glfw
+[submodule "Nerthus/vendor/imgui"]
+	path = Nerthus/vendor/imgui
+	url = https://github.com/Iriasviel/imgui
