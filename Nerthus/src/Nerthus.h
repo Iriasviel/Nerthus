@@ -3,6 +3,7 @@
 // For use by Nerthus Application
 
 #include "Nerthus/Application.h"
+#include "Nerthus/Layer.h"
 #include "Nerthus/Log.h"
 
 // --- Entry Point ---

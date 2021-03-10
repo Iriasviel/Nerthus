@@ -7,6 +7,12 @@
     <Filter Include="Nerthus\Events">
       <UniqueIdentifier>{32E70A73-1EB5-FE78-0749-6F9FF3B5DADD}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Platform">
+      <UniqueIdentifier>{2AC788B4-1694-E3BF-3FAD-D1672BD9184E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Platform\Windows">
+      <UniqueIdentifier>{64FBD71A-50F4-F66C-7926-DCF1657ED678}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Nerthus.h" />
@@ -31,23 +37,39 @@
     <ClInclude Include="src\Nerthus\Events\MouseEvent.h">
       <Filter>Nerthus\Events</Filter>
     </ClInclude>
+    <ClInclude Include="src\Nerthus\Layer.h">
+      <Filter>Nerthus</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Nerthus\LayerStack.h">
+      <Filter>Nerthus</Filter>
+    </ClInclude>
     <ClInclude Include="src\Nerthus\Log.h">
       <Filter>Nerthus</Filter>
     </ClInclude>
     <ClInclude Include="src\Nerthus\Window.h">
       <Filter>Nerthus</Filter>
     </ClInclude>
+    <ClInclude Include="src\Platform\Windows\WindowsWindow.h">
+      <Filter>Platform\Windows</Filter>
+    </ClInclude>
     <ClInclude Include="src\ntpch.h" />
-    <ClInclude Include="src\Platform\Windows\WindowsWindow.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Nerthus\Application.cpp">
       <Filter>Nerthus</Filter>
     </ClCompile>
+    <ClCompile Include="src\Nerthus\Layer.cpp">
+      <Filter>Nerthus</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Nerthus\LayerStack.cpp">
+      <Filter>Nerthus</Filter>
+    </ClCompile>
     <ClCompile Include="src\Nerthus\Log.cpp">
       <Filter>Nerthus</Filter>
     </ClCompile>
+    <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp">
+      <Filter>Platform\Windows</Filter>
+    </ClCompile>
     <ClCompile Include="src\ntpch.cpp" />
-    <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp" />
   </ItemGroup>
 </Project>

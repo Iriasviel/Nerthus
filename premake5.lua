@@ -13,8 +13,10 @@ outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 -- Include directories relative to root folder (solution directory)
 IncludeDir = {}
 IncludeDir["GLFW"] = "Nerthus/vendor/GLFW/include"
+IncludeDir["Glad"] = "Nerthus/vendor/Glad/include"
 
 include "Nerthus/vendor/GLFW"
+include "Nerthus/vendor/Glad"
 
 project "Nerthus"
     location "Nerthus"
@@ -37,12 +39,14 @@ project "Nerthus"
     {
         "%{prj.name}/src",
         "%{prj.name}/vendor/spdlog/include",
-        "%{IncludeDir.GLFW}"
+        "%{IncludeDir.GLFW}",
+        "%{IncludeDir.Glad}"
     }
 
     links
     {
         "GLFW",
+        "Glad",
         "opengl32.lib"
     }
 
@@ -55,6 +59,7 @@ project "Nerthus"
         {
             "NT_PLATFORM_WINDOWS", 
             "NT_BUILD_DLL",
+            "GLFW_INCLUDE_NONE"
         }
 
         postbuildcommands
@@ -64,14 +69,17 @@ project "Nerthus"
 
     filter "configurations:Debug"
         defines "NT_DEBUG"
+        buildoptions "/MDd"
         symbols "On"
         
     filter "configurations:Release"
         defines "NT_RELEASE"
+        buildoptions "/MD"
         optimize "On"
 
     filter "configurations:Final"
         defines "NT_FINAL"
+        buildoptions "/MD"
         optimize "On"
 
 project "Sandbox"
@@ -111,12 +119,15 @@ project "Sandbox"
 
     filter "configurations:Debug"
         defines "NT_DEBUG"
+        buildoptions "/MDd"
         symbols "On"
         
     filter "configurations:Release"
         defines "NT_RELEASE"
+        buildoptions "/MD"
         optimize "On"
 
     filter "configurations:Final"
         defines "NT_FINAL"
+        buildoptions "/MD"
         optimize "On"
